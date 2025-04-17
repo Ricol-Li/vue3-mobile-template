@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "antfu.unocss",
+    "antfu.goto-alias",
+    "antfu.iconify",
+    "antfu.file-nesting",
+    "dbaeumer.vscode-eslint",
+    "fishku.vant-snippets",
+    "aaron-bond.better-comments"
+  ]
+}

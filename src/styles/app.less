@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--van-gray-1);
+  font-size: var(--van-font-size-lg);
+  color-scheme: light;
+}
+
+body {
+  overscroll-behavior: none;
+}
+
+//html.dark {
+//  background: #222;
+//  color-scheme: dark;
+//}
+
+#app {
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  background-color: #f5f7fa;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
