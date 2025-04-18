@@ -33,6 +33,15 @@ export const constantRoutes: Array<CustomRouteRecord> = [
     },
   },
   {
+    path: '/activity/setting/:activityId',
+    name: 'AddActivity',
+    component: () => import('@/views/activity-setting/index.vue'),
+    meta: {
+      title: '活动设置',
+      type: 'primary',
+    },
+  },
+  {
     path: '/home',
     name: 'Home',
     component: () => import('@/views/home/index.vue'),

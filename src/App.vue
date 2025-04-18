@@ -12,7 +12,7 @@ console.log(appStore)
     <RouterView v-slot="{ Component, route }">
       <section class="app-wrapper">
         <Transition name="fade" mode="out-in">
-          <KeepAlive :include="['home']">
+          <KeepAlive :include="['Home']">
             <component :is="Component" :key="route.path" />
           </KeepAlive>
         </Transition>
@@ -25,9 +25,6 @@ console.log(appStore)
 <style scoped>
 .app-wrapper {
   width: 100%;
-  position: relative;
-  padding: 16px;
-  height: 2000px;
 }
 
 /* 定义淡入淡出动画 */

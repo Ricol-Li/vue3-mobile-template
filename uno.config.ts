@@ -14,4 +14,10 @@ export default defineConfig({
       baseFontSize: 4,
     }),
   ],
+  rules: [
+    [/^p-(\d+)-(\d+)$/, ([, y, x]) => ({ padding: `${Number(y)}px ${Number(x)}px` })],
+  ],
+  shortcuts: [
+    ['flex-center', 'flex items-center justify-center'],
+  ],
 })

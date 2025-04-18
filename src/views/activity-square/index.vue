@@ -1,16 +1,52 @@
 <script setup lang="ts">
-const router = useRouter()
-function enterActivity() {
-  router.push('/home')
+function handleSearch(value: string) {
+  console.log('🚀 ~ handleSearch ~ value:', value)
 }
+
+const tabList = [
+  {
+    title: '最新活动',
+    key: '1',
+  },
+  {
+    title: '班级活动',
+    key: '2',
+  },
+  {
+    title: '学校活动',
+    key: '3',
+  },
+  {
+    title: '区域活动',
+    key: '4',
+  },
+]
+
+const activityList = ref([
+  {
+    title: '2024年宜昌市“基础教育精品课”遴选活动',
+    name: '朱平秀',
+    orgName: '安徽省科学教育研究院',
+    status: 'warning',
+    imgUrl: new URL('@/assets/images/banner/activity_banner_1.png', import.meta.url).href,
+  },
+  {
+    title: '2024年宜昌市“基础教育精品课”遴选活动',
+    name: '朱平秀',
+    orgName: '安徽省科学教育研究院',
+    status: 'primary',
+    imgUrl: new URL('@/assets/images/banner/activity_banner_2.png', import.meta.url).href,
+  },
+])
 </script>
 
 <template>
   <div>
-    活动广场
-    <VanButton @click="enterActivity">
-      进入活动
-    </VanButton>
+    <HeaderSearch placeholder="搜索活动名称" @search="handleSearch" />
+    <Tab :tab-list="tabList">
+      <ActivityList :activity-list="activityList" />
+    </Tab>
+    <AddActivityButton />
   </div>
 </template>
 

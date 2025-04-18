@@ -1,13 +1,19 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+
+const router = useRouter()
+function handleEditActivity() {
+  router.push('/activity/setting/1')
+}
 </script>
 
 <template>
   <div>
     <Icon icon="fluent-emoji:accordion" />
-    我是首页
-    <VanButton>ddd</VanButton>
-    <img src="/tabbar/secondary_home.png" alt="" />
+    活动首页
+    <VanButton @click="handleEditActivity">
+      编辑活动
+    </VanButton>
   </div>
 </template>
 

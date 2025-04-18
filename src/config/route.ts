@@ -1,7 +1,7 @@
 /**
  * 可以显示TabBar的路由Name 白名单
  * * 可以显示TabBar的路由Name 白名单
- * ? 注意：路由Name必须配置的
+ * ! 注意：路由Name必须配置的
  */
 import type { CustomRouteRecord } from '@/router/router'
 import activitySquare from '@/assets/images/tabbar/primary_activity_square.png'

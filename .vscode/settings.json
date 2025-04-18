@@ -46,5 +46,16 @@
     "scss",
     "pcss",
     "postcss"
+  ],
+  "better-comments.tags": [
+    {
+      "tag": "!",
+      "color": "#e15353",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
   ]
 }
