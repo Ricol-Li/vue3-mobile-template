@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     ActivityList: typeof import('./../components/activity-list/ActivityList.tsx')['default']
     AddActivityButton: typeof import('./../components/button/AddActivityButton.tsx')['default']
+    AiSupportButton: typeof import('./../components/button/AiSupportButton.tsx')['default']
     HeaderSearch: typeof import('./../components/header-search/HeaderSearch.tsx')['default']
     NavBar: typeof import('./../components/nav-bar/NavBar.tsx')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
@@ -19,7 +20,10 @@ declare module 'vue' {
     TabBar: typeof import('./../components/tab-bar/TabBar.tsx')['default']
     Tag: typeof import('./../components/tag/Tag.tsx')['default']
     VanButton: typeof import('vant/es')['Button']
+    VanCellGroup: typeof import('vant/es')['CellGroup']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
+    VanField: typeof import('vant/es')['Field']
+    VanForm: typeof import('vant/es')['Form']
     VanTab: typeof import('vant/es')['Tab']
     VanTabs: typeof import('vant/es')['Tabs']
   }

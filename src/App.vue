@@ -25,6 +25,7 @@ console.log(appStore)
 <style scoped>
 .app-wrapper {
   width: 100%;
+  position: relative;
 }
 
 /* 定义淡入淡出动画 */

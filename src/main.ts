@@ -5,9 +5,11 @@ import router from '@/router'
 import 'virtual:uno.css'
 import '@/styles/app.less'
 import '@/styles/var.less'
-// import 'normalize.css'
+import 'normalize.css'
 
 import 'vant/lib/index.css'
+
+import '@vant/touch-emulator' // Vant 桌面端适配
 /* --------------------------------
 Vant 中有个别组件是以函数的形式提供的，
 包括 Toast，Dialog，Notify 和 ImagePreview 组件。

@@ -7,8 +7,8 @@
 export {}
 declare global {
   const EffectScope: typeof import('vue')['EffectScope']
-  const NavBar: typeof import('../components/NavBar')['default']
-  const TabBar: typeof import('../components/TabBar')['default']
+  const NavBar: typeof import('../components/nav-bar/NavBar')['default']
+  const TabBar: typeof import('../components/tab-bar/TabBar')['default']
   const acceptHMRUpdate: typeof import('pinia')['acceptHMRUpdate']
   const computed: typeof import('vue')['computed']
   const createApp: typeof import('vue')['createApp']

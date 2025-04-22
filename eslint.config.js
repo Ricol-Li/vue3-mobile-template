@@ -32,6 +32,11 @@ export default antfu(
         svg: 'always',
         math: 'always',
       }],
+      // 强制 Vue 模板中的组件标签使用 PascalCase
+      'vue/component-name-in-template-casing': ['error', 'PascalCase', {
+        registeredComponentsOnly: false, // 仅检查注册的组件
+        ignores: [], // 可忽略的组件名
+      }],
     },
   },
   {
