@@ -12,10 +12,11 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@unocss/reset": "66.1.0-beta.12",
     "@vant/touch-emulator": "^1.4.0",
     "@vitejs/plugin-vue-jsx": "^4.1.2",
+    "dayjs": "^1.11.13",
     "lodash-es": "^4.17.21",
-    "normalize.css": "^8.0.1",
     "nprogress": "^0.2.0",
     "pinia": "^3.0.2",
     "pinia-plugin-persistedstate": "^4.2.0",

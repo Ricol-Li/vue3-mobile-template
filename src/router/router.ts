@@ -42,6 +42,15 @@ export const constantRoutes: Array<CustomRouteRecord> = [
     },
   },
   {
+    path: '/activity/setting/works-rule',
+    name: 'ActivityWorksRule',
+    component: () => import('@/views/activity-setting/ActivityWorksRule.vue'),
+    meta: {
+      title: '作品附件',
+      type: 'primary',
+    },
+  },
+  {
     path: '/home',
     name: 'Home',
     component: () => import('@/views/home/index.vue'),

@@ -5,7 +5,7 @@ import router from '@/router'
 import 'virtual:uno.css'
 import '@/styles/app.less'
 import '@/styles/var.less'
-import 'normalize.css'
+import '@unocss/reset/normalize.css'
 
 import 'vant/lib/index.css'
 

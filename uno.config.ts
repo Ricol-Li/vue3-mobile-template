@@ -19,5 +19,6 @@ export default defineConfig({
   ],
   shortcuts: [
     ['flex-center', 'flex items-center justify-center'],
+    ['common-section', 'p-32px bg-#fff'],
   ],
 })
