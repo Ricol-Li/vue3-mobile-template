@@ -74,7 +74,7 @@ const worksNumList = [
 </script>
 
 <template>
-  <div class="activity-works-rule" pb-178>
+  <div class="activity-works-rule" common-page>
     <VanForm required @submit="handleSubmit">
       <VanField
         v-model="formData.activityName"

@@ -6,16 +6,22 @@ import './tab.less'
 
 export default defineComponent({
   name: 'Tab',
+  emits: ['update:active', 'change'],
   props: {
     tabList: { type: Array, default: () => [] },
+    active: { type: String, default: '1' },
   },
 
-  setup(props, { slots }) {
+  setup(props, { slots, emit }) {
+    function handleChange(name: string, title: string) {
+      emit('update:active', name)
+      emit('change', name, title)
+    }
     return () => (
-      <VanTabs swipeable={true} animated={true} class="custom-van-tabs">
+      <VanTabs active={props.active} swipeable={true} animated={true} lazy-render={true} class="custom-van-tabs" onChange={handleChange}>
         {
           props.tabList.map((item: any) => (
-            <VanTab title={item.title} key={item.key}>
+            <VanTab title={item.title} key={item.key} name={item.key}>
               {{
                 default: () => (slots.default ? slots.default() : null),
               }}

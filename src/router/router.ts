@@ -74,7 +74,7 @@ export const constantRoutes: Array<CustomRouteRecord> = [
     name: 'Ranking',
     component: () => import('@/views/ranking/index.vue'),
     meta: {
-      title: '排行',
+      title: '活动广场',
       type: 'secondary',
 
     },

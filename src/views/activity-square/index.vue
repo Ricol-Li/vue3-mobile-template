@@ -4,22 +4,10 @@ function handleSearch(value: string) {
 }
 
 const tabList = [
-  {
-    title: '最新活动',
-    key: '1',
-  },
-  {
-    title: '班级活动',
-    key: '2',
-  },
-  {
-    title: '学校活动',
-    key: '3',
-  },
-  {
-    title: '区域活动',
-    key: '4',
-  },
+  { title: '最新活动', key: '1' },
+  { title: '班级活动', key: '2' },
+  { title: '学校活动', key: '3' },
+  { title: '区域活动', key: '4' },
 ]
 
 const activityList = ref([

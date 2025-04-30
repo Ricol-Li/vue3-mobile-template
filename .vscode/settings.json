@@ -6,7 +6,9 @@
   // Auto fix
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit",
-    "source.organizeImports": "never"
+    "source.fixAll": "never", // 禁用其他插件的通用修复操作
+    "source.organizeImports": "never", // 禁用导入整理（可能由其他扩展触发）
+    "source.addMissingImports": "never" // 禁用自动添加缺失导入（可能由 IntelliCode 或 Lingma 触发）
   },
 
   // Silent the stylistic rules in you IDE, but still auto fix them
