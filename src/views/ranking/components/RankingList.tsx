@@ -18,7 +18,6 @@ export default defineComponent({
     activeTab: { type: String, default: '1' },
   },
   setup(props) {
-    console.log(props)
     return () => (
       <div class="mt-16">
         {props.dataList.map((item, index) => (
@@ -41,7 +40,7 @@ const RankItem = defineComponent({
     const { itemData } = props
     const activeTab = computed(() => props.activeTab)
     return () => (
-      <div class="border-b-1-#E2E6EB flex pb-32">
+      <div class="flex pb-32 border-b-1-#E2E6EB">
         <RankIcon rank={itemData.rank} activeTab={activeTab.value} />
         <div class="ml-16 mr-8px mr-9 flex flex-1 flex-col gap-16 overflow-hidden pt-6px">
           <div class="font-600">{itemData.name}</div>
@@ -66,7 +65,7 @@ const PrizeItem = defineComponent({
   setup(props) {
     const { itemData } = props
     return () => (
-      <div class="border-b-1-#E2E6EB flex pb-32">
+      <div class="flex pb-32 border-b-1-#E2E6EB">
         <RankIcon rank={itemData.rank} activeTab={props.activeTab} />
         <div class="ml-16 mr-8px mr-9 flex flex-1 flex-col gap-16 overflow-hidden pt-6px">
           <div class="flex items-center font-600">
@@ -86,7 +85,7 @@ function SchoolInfo(props: { itemData: DataListItem }) {
   return (<div class="w-full overflow-hidden text-ellipsis text-nowrap text-28 text-#86909C">{`${itemData.district} · ${itemData.school}`}</div>)
 }
 
-const RandImageMap = {
+const RankImageMap = {
   1: {
     imgUrl: new URL('@/assets/images/icons/first.png', import.meta.url).href,
     nameTagBgStyle: { background: 'linear-gradient( 270deg, #FF5151 0%, #FF8437 100%' },
@@ -106,7 +105,6 @@ const RandImageMap = {
 
 function RankIcon(props: { rank: number, activeTab: string }) {
   const { rank, activeTab } = props
-  console.log(activeTab)
 
   return (
     <div class={`h-56 w-56 flex-center rounded-7 shrink-0 ${rank <= 3 && activeTab !== '1' ? 'bg-#f4f7ff text-#2C68FF' : 'text-#86909C '} `}>
@@ -117,7 +115,7 @@ function RankIcon(props: { rank: number, activeTab: string }) {
 
 function RankImage(props: { rank: number }) {
   const { rank } = props
-  return (<img src={RandImageMap[rank].imgUrl} class="h-56 w-56" />)
+  return (<img src={RankImageMap[rank].imgUrl} class="h-56 w-56" />)
 }
 
 function NameTag(props: { rank: number }) {
@@ -125,9 +123,9 @@ function NameTag(props: { rank: number }) {
   return (
     <div
       class="ml-16 h-36 w-92 rounded-36 text-center text-22 text-#fff font-normal leading-36"
-      style={RandImageMap[rank].nameTagBgStyle}
+      style={RankImageMap[rank].nameTagBgStyle}
     >
-      {RandImageMap[rank].prizeName}
+      {RankImageMap[rank].prizeName}
     </div>
   )
 }

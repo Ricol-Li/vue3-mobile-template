@@ -15,21 +15,25 @@ export default defineComponent({
     onReject: { type: Function, default: () => {} },
     onClosed: { type: Function, default: () => {} },
     columns: { type: Array, default: () => [] },
+    currentValue: { type: Array as PropType<Array<string | number>>, required: true },
   },
   setup(props) {
     const visible = ref(true)
     console.log('🚀 ~ PickerPopup ~ props:', props)
-    function handleConfirm(selectedValues, selectedOptions, selectedIndexes) {
+    function handleConfirm({ selectedValues, selectedOptions, selectedIndexes }) {
       console.log(selectedValues, selectedOptions, selectedIndexes)
-      props.onResolve({ result: true, name: '123' })
-      visible.value = false
+      props.onResolve({ result: true, selectedValues, selectedOptions, selectedIndexes })
+      handleClose()
     }
-    function handleCancel(selectedValues, selectedOptions, selectedIndexes) {
+    function handleCancel({ selectedValues, selectedOptions, selectedIndexes }) {
       console.log(selectedValues, selectedOptions, selectedIndexes)
-      props.onReject({ result: false, name: '456' })
-      visible.value = false
+      props.onReject({ result: false, selectedValues, selectedOptions, selectedIndexes })
+      handleClose()
     }
 
+    function handleClose() {
+      visible.value = false
+    }
     function handleClosed() {
       props.onClosed()
     }
@@ -37,6 +41,7 @@ export default defineComponent({
     return () => (
       <CommonPopUp v-model={visible.value} onClosed={handleClosed}>
         <Picker
+          model-value={props.currentValue}
           columns={props.columns}
           title={props.title}
           confirm-button-text={props.confirmButtonText}

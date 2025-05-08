@@ -39,7 +39,7 @@ const StatisticsItem = defineComponent({
   setup(props) {
     const { itemData } = props
     return () => (
-      <div class="border-b-1-#E2E6EB relative flex pb-32">
+      <div class="relative flex pb-32 border-b-1-#E2E6EB">
         <RankIcon rank={itemData.rank} />
         <div class="ml-16 mr-8px mr-9 flex flex-1 flex-col overflow-hidden pt-6px text-30">
           <div class="flex items-center font-600">{itemData.school}</div>
@@ -48,7 +48,7 @@ const StatisticsItem = defineComponent({
             <div class="flex-1">{`作品数：${itemData.times}`}</div>
           </div>
         </div>
-        <div class="border-1-#C9CDD4 absolute right-0 top-0 rounded-6 text-24 p-8-16">{itemData.district}</div>
+        <div class="absolute right-0 top-0 rounded-6 text-24 p-8-16 border-1-#C9CDD4">{itemData.district}</div>
       </div>
     )
   },

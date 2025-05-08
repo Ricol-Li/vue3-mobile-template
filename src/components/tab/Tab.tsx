@@ -10,6 +10,7 @@ export default defineComponent({
   props: {
     tabList: { type: Array, default: () => [] },
     active: { type: String, default: '1' },
+    swipeable: { type: Boolean, default: true },
   },
 
   setup(props, { slots, emit }) {
@@ -18,7 +19,7 @@ export default defineComponent({
       emit('change', name, title)
     }
     return () => (
-      <VanTabs active={props.active} swipeable={true} animated={true} lazy-render={true} class="custom-van-tabs" onChange={handleChange}>
+      <VanTabs active={props.active} swipeable={props.swipeable} animated={true} lazy-render={true} class="custom-van-tabs" onChange={handleChange}>
         {
           props.tabList.map((item: any) => (
             <VanTab title={item.title} key={item.key} name={item.key}>

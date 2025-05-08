@@ -16,9 +16,15 @@ export default defineConfig({
   ],
   rules: [
     [/^p-(\d+)-(\d+)$/, ([, y, x]) => ({ padding: `${Number(y)}px ${Number(x)}px` })],
+    // 你也可以让它更灵活，比如允许动态宽度：
+    [/^border-b-(\d+)-(.+)$/, ([_, num, color]) => ({ 'border-bottom': `${num}px solid ${color}` })],
+    [/^border-t-(\d+)-(.+)$/, ([_, num, color]) => ({ 'border-top': `${num}px solid ${color}` })],
+    [/^border-(\d+)-(.+)$/, ([_, num, color]) => ({ border: `${num}px solid ${color}` })],
   ],
   shortcuts: [
+    ['overflow-ellipsis', 'overflow-hidden text-ellipsis whitespace-nowrap'], // 溢出省略号
     ['flex-center', 'flex items-center justify-center'],
     ['common-section', 'p-32px bg-#fff'],
+    ['common-page', 'pb-178'], // 抬升页面，底部留白，避免底部被TabBar覆盖
   ],
 })

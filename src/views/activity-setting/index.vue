@@ -87,7 +87,7 @@ async function selectActivityTime() {
 </script>
 
 <template>
-  <div pb-178>
+  <div common-page>
     <!-- {{ isAddActivity ? '添加活动' : '编辑活动' }} -->
     <VanForm required @submit="handleSubmit">
       <VanCellGroup mt-16px overflow-hidden pb-32px>

@@ -55,7 +55,7 @@ export const constantRoutes: Array<CustomRouteRecord> = [
     name: 'Home',
     component: () => import('@/views/home/index.vue'),
     meta: {
-      title: '首页',
+      title: '活动广场',
       type: 'secondary',
     },
   },
@@ -66,7 +66,15 @@ export const constantRoutes: Array<CustomRouteRecord> = [
     meta: {
       title: '作品',
       type: 'secondary',
-
+    },
+  },
+  {
+    path: '/publish/works',
+    name: 'PublishWorks',
+    component: () => import('@/views/works/PublishWorks.vue'),
+    meta: {
+      title: '参与活动',
+      type: 'secondary',
     },
   },
   {
@@ -76,7 +84,6 @@ export const constantRoutes: Array<CustomRouteRecord> = [
     meta: {
       title: '活动广场',
       type: 'secondary',
-
     },
 
   },

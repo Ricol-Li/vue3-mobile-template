@@ -1,3 +1,4 @@
+<!-- 活动广场主页面 -->
 <script setup lang="ts">
 function handleSearch(value: string) {
   console.log('🚀 ~ handleSearch ~ value:', value)
