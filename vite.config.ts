@@ -1,9 +1,12 @@
 import path from 'node:path'
 import process from 'node:process'
+
 import { defineConfig, loadEnv } from 'vite'
-import type { ConfigEnv, UserConfig } from 'vite'
+
 import { createVitePlugins } from './build/vite'
 import { exclude, include } from './build/vite/optimize'
+
+import type { ConfigEnv, UserConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }: ConfigEnv): UserConfig => {
